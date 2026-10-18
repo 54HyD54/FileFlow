@@ -19,12 +19,17 @@ FileFlow is a Windows desktop app for organizing files with user-defined rules. 
 - .NET 8 SDK
 - Visual Studio 2022 or another .NET 8 compatible build environment
 
-## Build
+## Download and run
 
-Open `FileFlow.sln` in Visual Studio, restore the NuGet packages, and build the solution. Or run:
+1. On GitHub, select **Code → Download ZIP**, then extract the ZIP file fully.
+2. Open `FileFlow.sln` from the extracted folder in Visual Studio 2022.
+3. Let Visual Studio restore the NuGet packages, then build and run the project.
+
+Or use PowerShell from the extracted folder:
 
 ```powershell
 dotnet build .\FileFlow.sln
+dotnet run --project .\FileFlow\FileFlow.csproj
 ```
 
 The app uses SQLite for rules and activity records. Its database is created locally when the application starts; runtime database files are not included in this repository.
